@@ -23,7 +23,8 @@ jobs:
         python -m pip install playwright
         python -m playwright install --with-deps
         python -m pip install pytest
-        pip list
+        python -m pip install pytest-playwright
+
     - name: Run your tests
       run: pytest --tracing=retain-on-failure
     - uses: actions/upload-artifact@v4
